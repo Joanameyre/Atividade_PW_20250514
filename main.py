@@ -31,8 +31,15 @@ async def get_clientes():
 @app.get("/produtos")
 async def get_produtos():
     produtos = produto_repo.obter_todos()
-    response = templates.TemplateResponse("produto.html", {"request": {}, "produtos": produtos})
+    response = templates.TemplateResponse("produtos.html", {"request": {}, "produtos": produtos})
     return response
+
+@app.get("/categorias")
+async def get_categorias():
+    categorias = categoria_repo.obter_todos()
+    response = templates.TemplateResponse("categorias.html", {"request": {}, "categorias": categorias})
+    return response
+
 
 
 if __name__ == "__main__":
