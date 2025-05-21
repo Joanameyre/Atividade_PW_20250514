@@ -6,7 +6,7 @@ nome TEXT NOT NULL,
 
 INSERIR = """
 INSERT INTO categoria (nome) 
-VALUES (?, ?, ?, ?, ?)
+VALUES (?)
 """
 
 OBTER_TODOS = """

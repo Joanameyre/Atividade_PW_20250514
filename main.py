@@ -3,7 +3,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
 
-from data import produto_repo
+from data import categoria_repo, produto_repo
 from data import cliente_repo
 
 
